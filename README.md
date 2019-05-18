@@ -8,7 +8,7 @@
 <hr>
 
 ### Features
-- Created using <a>**Angular Material CDK**</a> portals
+- Created using <a href="https://material.angular.io/cdk/portal/overview">**Angular Material CDK**</a> portals
 - Toasts animations via <a href="https://angular.io/guide/reusable-animations">**Angular Reusable Animation**</a>
 - Clean layout with two main themes: **light & dark**
 - Easily configurable timing & positioning
