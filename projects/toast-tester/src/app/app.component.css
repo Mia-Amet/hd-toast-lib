@@ -1,0 +1,54 @@
+.form-control.ng-dirty.ng-invalid {
+  border-color: rgba(139, 0, 0, 0.5);
+}
+
+.text-extra-sm {
+  font-size: 12px;
+}
+
+.invalid-message {
+  color: rgba(139, 0, 0, 0.75);;
+}
+
+.disabled-label {
+  opacity: .5;
+}
+
+input:disabled {
+  color: #6f7477;
+}
+
+.container-fluid {
+  min-height: fit-content;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container-fluid.light {
+  background-color: rgba(129, 133, 147, 0.05);
+}
+.container-fluid.dark {
+  background-color: rgba(26, 29, 32, 0.9);
+  color: lightslategrey;
+}
+.container-fluid.dark hr {
+  background: rgba(255, 250, 240, 0.25);
+}
+.container-fluid.dark h2 {
+  color: burlywood;
+}
+.container-fluid.dark input,
+.container-fluid.dark input:-webkit-autofill,
+.container-fluid.dark select,
+.container-fluid.dark select:-webkit-autofill {
+  background: rgba(26, 29, 32, 0.25) !important;
+  color: lightgoldenrodyellow !important;
+  border-color: rgba(211, 211, 211, 0.25);
+}
+.container-fluid.dark input:disabled {
+  color: grey !important;
+}
+

@@ -1,0 +1,4 @@
+{
+  "entry": "src/lib/assets/styles/entry.scss",
+  "dest": "../../dist/toast-lib/styles/main.scss"
+}

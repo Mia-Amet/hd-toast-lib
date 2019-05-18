@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../../../dist/toast-lib/styles/main";
+
+body {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+h2 {
+  font: 300 48px/150% 'Mitr', sans-serif !important;
+  color: #353B3F;
+}

@@ -1,0 +1,102 @@
+<div class="container-fluid p-0 m-0 border-0 position-absolute" [ngClass]="form.get('theme').value">
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-10 text-center offset-1 mb-5">
+        <h2>Angular HD Toaster Demo</h2>
+      </div>
+    </div>
+    <form [formGroup]="form">
+      <div class="row">
+        <div class="col-4 offset-1">
+          <div class="form-group mb-4">
+            <label for="message" class="col-form-label-sm">Toast message</label>
+            <input formControlName="message" type="text" id="message" class="form-control"/>
+            <div *ngIf="form.get('message').dirty && form.get('message').invalid">
+              <p class="text-extra-sm font-italic m-0 invalid-message">This field is required</p>
+            </div>
+          </div>
+          <div class="form-group mb-4">
+            <label for="title" class="col-form-label-sm">
+              Toast title <span class="font-italic text-secondary text-extra-sm">(optional)</span>
+            </label>
+            <input formControlName="title" type="text" id="title" class="form-control"/>
+          </div>
+        </div>
+        <div class="col-2 offset-1">
+          <div class="form-group mb-4">
+            <label for="timeout" class="col-form-label-sm"
+                   [ngClass]="{ 'disabled-label': form.get('timeout').disabled }">Timeout</label>
+            <input formControlName="timeout" id="timeout" type="number" class="form-control" />
+          </div>
+          <div class="form-group mb-4">
+            <label for="extTimeout" class="col-form-label-sm"
+                   [ngClass]="{ 'disabled-label': form.get('extTimeout').disabled }">Extended Timeout</label>
+            <input formControlName="extTimeout" id="extTimeout" type="number" class="form-control" />
+          </div>
+        </div>
+        <div class="col-2 offset-1">
+          <div class="form-group mb-4">
+            <label for="easeTime" class="col-form-label-sm">Ease time</label>
+            <input formControlName="easeTime" id="easeTime" type="number" class="form-control" />
+          </div>
+          <div class="form-group mb-4">
+            <label for="maxToastNum" class="col-form-label-sm">Max toast number</label>
+            <input formControlName="maxToastNum" id="maxToastNum" type="number" class="form-control" />
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-2 offset-1">
+          <div class="form-group mb-4">
+            <label for="position" class="col-form-label-sm">Toast position</label>
+            <select formControlName="position" type="text" id="position" class="form-control pl-3 pr-3">
+              <option [defaultSelected]="true">top-left</option>
+              <option>top-right</option>
+              <option>bottom-left</option>
+              <option>bottom-right</option>
+              <option>top-full-width</option>
+              <option>bottom-full-width</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="form-group mb-4">
+            <label for="theme" class="col-form-label-sm">Toast position</label>
+            <select formControlName="theme" type="text" id="theme" class="form-control pl-3 pr-3">
+              <option [defaultSelected]="true">light</option>
+              <option>dark</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-2 offset-1">
+          <div class="form-group">
+            <input formControlName="disableTimeouts" type="checkbox" id="disableTimeouts" class="form-check d-inline-block mr-2" />
+            <label for="disableTimeouts" class="form-check-label col-form-label-sm">Disable timeouts</label>
+          </div>
+        </div>
+        <div class="col-2 offset-1">
+          <div class="form-group">
+            <input formControlName="tapToDispose" type="checkbox" id="tapToDispose" class="form-check d-inline-block mr-2" />
+            <label for="tapToDispose" class="form-check-label col-form-label-sm">Tap to dispose</label>
+          </div>
+          <div class="form-group">
+            <input formControlName="closeIcon" type="checkbox" id="closeIcon" class="form-check d-inline-block mr-2" />
+            <label for="closeIcon" class="form-check-label col-form-label-sm">Close icon</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-10 offset-1 text-right">
+          <hr>
+          <button type="button" class="btn btn-success pr-3 pl-3 mt-4 mr-2" (click)="success()">Toast Success</button>
+          <button type="button" class="btn btn-info pr-3 pl-3 mt-4 mr-2" (click)="info()">Toast Info</button>
+          <button type="button" class="btn btn-warning pr-3 pl-3 mt-4 mr-2" (click)="warning()">Toast Warning</button>
+          <button type="button" class="btn btn-danger pr-3 pl-3 mt-4 mr-2" (click)="error()">Toast Error</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+

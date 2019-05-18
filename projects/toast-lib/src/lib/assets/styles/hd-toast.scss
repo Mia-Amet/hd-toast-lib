@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Mallanna|Mitr:200,300,400,500,600,700');
+
+.hd-toast-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.hd-toast-container.top-left, .hd-toast-container.top-right,
+.hd-toast-container.bottom-left, .hd-toast-container.bottom-right {
+  width: fit-content;
+}
+.hd-toast-container.top-left, .hd-toast-container.top-right, .hd-toast-container.top-full-width {
+  flex-direction: column;
+}
+.hd-toast-container.bottom-left, .hd-toast-container.bottom-right, .hd-toast-container.bottom-full-width {
+  flex-direction: column-reverse;
+}
+.hd-toast-container.top-left, .hd-toast-container.bottom-left {
+  left: 0;
+  right: unset;
+  align-items: flex-start;
+}
+.hd-toast-container.top-right, .hd-toast-container.bottom-right {
+  left: unset;
+  right: 0;
+  align-items: flex-end;
+}
+.hd-toast-container.top-full-width, .hd-toast-container.bottom-full-width {
+  width: 100%;
+}
+
+.hd-toast {
+  margin: 10px;
+  min-width: 300px;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: .95;
+  cursor: pointer;
+  transition: opacity .2s ease-in-out;
+  border-radius: 2px;
+  pointer-events: all;
+}
+.hd-toast.bottom-full-width, .hd-toast.top-full-width {
+  width: 100%;
+}
+
+.hd-toast.light {
+  color: #818593;
+  background-color: whitesmoke;
+}
+
+.hd-toast.dark {
+  color: lightgrey;
+  background-color: #1a1d20;
+}
+
+.hd-toast-content {
+  padding: 20px 0;
+  width: 80%;
+  height: 100%;
+}
+
+.hd-toast-icon {
+  min-height: 70px;
+  padding: 0;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+fa-icon.circle {
+  font-size: 30px;
+  position: absolute;
+  opacity: 0.2;
+}
+
+fa-icon.icon {
+  font-size: 22px;
+  height: 22px;
+  line-height: 18px;
+}
+
+.hd-toast.success .hd-toast-icon {
+  color: seagreen;
+}
+
+.hd-toast.error .hd-toast-icon {
+  color: #d85956;
+}
+
+.hd-toast.warning .hd-toast-icon {
+  color: #d88d39;
+}
+
+.hd-toast.info .hd-toast-icon {
+  color: #22a4d8;
+}
+
+.hd-toast:hover {
+  opacity: 1;
+}
+
+.hd-toast .hd-toast-title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  margin: 0 0 6px;
+  font-family: 'Mitr', sans-serif;
+  color: #5d606b;
+}
+
+.hd-toast .hd-toast-text {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  margin: 0;
+  font-family: 'Mallanna', sans-serif;
+}
+
+.hd-toast-close {
+  color: #353B3F;
+  opacity: .5;
+  position: absolute;
+  margin: 14px;
+  height: 11px;
+  line-height: 11px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.hd-warning-icon-size {
+  font-size: 18px !important;
+}
