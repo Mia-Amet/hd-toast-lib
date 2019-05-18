@@ -31,10 +31,10 @@
 
 - if using **angular-cli** in your **angular.json** file
 
-    	"styles": [
-    		"src/styles.css",
-    		"node_modules/hd-toast-lib/styles/main.scss"  //add this path
-    	],
+ 		"styles": [
+		  "src/styles.css",
+		  "node_modules/hd-toast-lib/styles/main.scss"  //add this path
+		]
 
 <br>
 
@@ -49,9 +49,9 @@
 	...
 
 	@NgModule({
-		imports: [
-			BrowserModule,
-			HdToastModule
+	  imports: [
+	    BrowserModule,
+	    HdToastModule
 	],
 	...
 	})
@@ -64,15 +64,15 @@
 	
 	@Component({...})
 	export class AppComponent {
-		constructor(private toast: HdToastService) { }
+	  constructor(private toast: HdToastService) { }
 		
-		errorAlert() {
-			this.toast.error('Something happened...', 'Oops!');  // to render a toast with title
-		}
+	  errorAlert() {
+	    this.toast.error('Something happened...', 'Oops!');  // to render a toast with title
+	  }
 		
-		infoAlert() {
-			this.toast.error('Something happened...');  // to render a toast without title
-		}
+	  infoAlert() {
+	    this.toast.error('Something happened...');  // to render a toast without title
+	  }
 	}
 <br>
 
@@ -98,17 +98,17 @@ To configure toast you can pass the **config object** as a third argument to `Hd
 ToastService methods take next arguments: ***message, title, ConfigObject***. Pass an options object to replace any default option.
 
 	this.toast.success('Goog news everyone...', 'Success!', {
-		timeout: 3000,
-		extendedTimeout: 1000,
-		position: 'bottom-right',
-		theme: 'dark'
+	  timeout: 3000,
+	  extendedTimeout: 1000,
+	  position: 'bottom-right',
+	  theme: 'dark'
 	});
 
 ##### ToastService methods return HdToastRef for a single toast:
 
-    	interface HdToastRef {
-    		dismiss: () => void;  //dismiss a toast
-    		active: () => boolean;  //check whether a toast is shown or not
-    	}
+    interface HdToastRef {
+  	  dismiss: () => void;  //dismiss a toast
+  	  active: () => boolean;  //check whether a toast is shown or not
+    }
 
 
