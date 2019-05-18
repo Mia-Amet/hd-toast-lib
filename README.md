@@ -3,8 +3,6 @@
 
 ![](https://github.com/dashaHsh/hd-toast-lib/blob/master/projects/hd-toast-lib/src/lib/assets/resources/toasts-preview.png?raw=true)
 
-<br>
-
 ### <center> <a href="https://github-3xd9n5.stackblitz.Io"><img src="https://dabuttonfactory.com/button.png?t=Live%20Demo&f=calibri-bold&ts=20&tc=fff&w=140&h=40&c=4&bgt=unicolored&bgc=327a13&shs=3&shc=274e13&sho=s"> </a> </center>
 
 <hr>
@@ -105,7 +103,6 @@ ToastService methods take next arguments: ***message, title, ConfigObject***. Pa
 		position: 'bottom-right',
 		theme: 'dark'
 	});
-.
 
 ##### ToastService methods return HdToastRef for a single toast:
 
