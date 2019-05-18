@@ -1,0 +1,4 @@
+{
+  "dest": "../../dist/hd-toast-lib/styles/main.scss",
+  "mask": "./src/**/*.scss"
+}

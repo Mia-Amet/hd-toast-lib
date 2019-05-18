@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "toast-lib": [
-        "dist/toast-lib"
+      "hd-toast-lib": [
+        "dist/hd-toast-lib"
       ],
-      "toast-lib/*": [
-        "dist/toast-lib/*"
+      "hd-toast-lib/*": [
+        "dist/hd-toast-lib/*"
       ]
     }
   }

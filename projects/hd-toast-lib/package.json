@@ -1,8 +1,29 @@
 {
-  "name": "toast-lib",
+  "name": "hd-toast-lib",
   "version": "0.0.1",
+  "description": "Angular Simple Clean Toast Library",
+  "repository": "dashaHsh/hd-toast-lib",
+  "homepage": "",
+  "bugs": "https://github.com/dashaHsh/hd-toast-lib/issues",
+  "license": "MIT",
+  "keywords": [
+    "hd-toast",
+    "hd-toast-lib",
+    "toast-ng",
+    "angular",
+    "angular2",
+    "typescript",
+    "alert",
+    "toast",
+    "toast-lib",
+    "toast-package",
+    "toast-npm",
+    "angular toast",
+    "notifications"
+  ],
   "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0"
+    "@angular/common": ">=6.0.0 <9.0.0",
+    "@angular/platform-browser": ">=6.0.0 <9.0.0",
+    "@angular/core": ">=6.0.0 <9.0.0"
   }
 }

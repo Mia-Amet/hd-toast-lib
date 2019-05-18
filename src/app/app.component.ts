@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HdToastService } from 'toast-lib';
+
+import { HdToastService } from 'hd-toast-lib';
 
 @Component({
   selector: 'app-root',
