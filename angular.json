@@ -3,41 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hd-toast-lib": {
-      "root": "projects/hd-toast-lib",
-      "sourceRoot": "projects/hd-toast-lib/src",
-      "projectType": "library",
-      "prefix": "hd",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/hd-toast-lib/tsconfig.lib.json",
-            "project": "projects/hd-toast-lib/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/hd-toast-lib/src/test.ts",
-            "tsConfig": "projects/hd-toast-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/hd-toast-lib/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/hd-toast-lib/tsconfig.lib.json",
-              "projects/hd-toast-lib/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "hd-toast-lib-app": {
       "root": "",
       "sourceRoot": "src",
@@ -142,7 +107,6 @@
     "hd-toast-lib-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
-      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
@@ -160,6 +124,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "hd-toast-lib": {
+      "root": "projects/hd-toast-lib",
+      "sourceRoot": "projects/hd-toast-lib/src",
+      "projectType": "library",
+      "prefix": "hd",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/hd-toast-lib/tsconfig.lib.json",
+            "project": "projects/hd-toast-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/hd-toast-lib/src/test.ts",
+            "tsConfig": "projects/hd-toast-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/hd-toast-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/hd-toast-lib/tsconfig.lib.json",
+              "projects/hd-toast-lib/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
