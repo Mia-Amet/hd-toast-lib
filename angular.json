@@ -3,33 +3,33 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "toast-lib": {
-      "root": "projects/toast-lib",
-      "sourceRoot": "projects/toast-lib/src",
+    "hd-toast-lib": {
+      "root": "projects/hd-toast-lib",
+      "sourceRoot": "projects/hd-toast-lib/src",
       "projectType": "library",
       "prefix": "hd",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/toast-lib/tsconfig.lib.json",
-            "project": "projects/toast-lib/ng-package.json"
+            "tsConfig": "projects/hd-toast-lib/tsconfig.lib.json",
+            "project": "projects/hd-toast-lib/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/toast-lib/src/test.ts",
-            "tsConfig": "projects/toast-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/toast-lib/karma.conf.js"
+            "main": "projects/hd-toast-lib/src/test.ts",
+            "tsConfig": "projects/hd-toast-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/hd-toast-lib/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/toast-lib/tsconfig.lib.json",
-              "projects/toast-lib/tsconfig.spec.json"
+              "projects/hd-toast-lib/tsconfig.lib.json",
+              "projects/hd-toast-lib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -38,9 +38,9 @@
         }
       }
     },
-    "toast-tester": {
-      "root": "projects/toast-tester/",
-      "sourceRoot": "projects/toast-tester/src",
+    "hd-toast-lib-app": {
+      "root": "",
+      "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -48,18 +48,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/toast-tester",
-            "index": "projects/toast-tester/src/index.html",
-            "main": "projects/toast-tester/src/main.ts",
-            "polyfills": "projects/toast-tester/src/polyfills.ts",
-            "tsConfig": "projects/toast-tester/tsconfig.app.json",
+            "outputPath": "dist/hd-toast-lib-app",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "projects/toast-tester/src/favicon.ico",
-              "projects/toast-tester/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "projects/toast-tester/src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.scss",
+              "src/bootstrap.css"
             ],
             "scripts": []
           },
@@ -67,8 +67,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/toast-tester/src/environments/environment.ts",
-                  "with": "projects/toast-tester/src/environments/environment.prod.ts"
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -93,35 +93,35 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "toast-tester:build"
+            "browserTarget": "hd-toast-lib-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "toast-tester:build:production"
+              "browserTarget": "hd-toast-lib-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "toast-tester:build"
+            "browserTarget": "hd-toast-lib-app:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/toast-tester/src/test.ts",
-            "polyfills": "projects/toast-tester/src/polyfills.ts",
-            "tsConfig": "projects/toast-tester/tsconfig.spec.json",
-            "karmaConfig": "projects/toast-tester/karma.conf.js",
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "projects/toast-tester/src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.scss",
+              "src/bootstrap.css"
             ],
             "scripts": [],
             "assets": [
-              "projects/toast-tester/src/favicon.ico",
-              "projects/toast-tester/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ]
           }
         },
@@ -129,8 +129,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/toast-tester/tsconfig.app.json",
-              "projects/toast-tester/tsconfig.spec.json"
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -139,27 +139,27 @@
         }
       }
     },
-    "toast-tester-e2e": {
-      "root": "projects/toast-tester-e2e/",
+    "hd-toast-lib-app-e2e": {
+      "root": "e2e/",
       "projectType": "application",
       "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/toast-tester-e2e/protractor.conf.js",
-            "devServerTarget": "toast-tester:serve"
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "hd-toast-lib-app-e2e:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "toast-tester:serve:production"
+              "devServerTarget": "hd-toast-lib-app-e2e:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "projects/toast-tester-e2e/tsconfig.e2e.json",
+            "tsConfig": "e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
@@ -168,5 +168,5 @@
       }
     }
   },
-  "defaultProject": "toast-lib"
+  "defaultProject": "hd-toast-lib-app"
 }
