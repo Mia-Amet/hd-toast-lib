@@ -16,7 +16,7 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../../coverage/toast-lib'),
+      dir: require('path').join(__dirname, '../../coverage/hd-toast-lib'),
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },

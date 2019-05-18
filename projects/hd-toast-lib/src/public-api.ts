@@ -1,5 +1,5 @@
 /*
- * Public API Surface of toast-lib
+ * Public API Surface of hd-toast-lib
  */
 
 export * from './lib/hd-overlay/hd-overlay-container';
