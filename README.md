@@ -1,1 +1,1 @@
-# ng-easy-toaster
+# hd-easy-toaster
